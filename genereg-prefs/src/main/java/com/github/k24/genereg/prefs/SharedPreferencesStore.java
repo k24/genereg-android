@@ -12,14 +12,14 @@ import com.github.k24.genereg.primitive.PrimitiveStore;
  * Created by k24 on 2017/01/15.
  */
 
-public class SharePreferencesStore implements PrimitiveStore {
+public class SharedPreferencesStore implements PrimitiveStore {
     private final SharedPreferences prefs;
 
-    public SharePreferencesStore(@NonNull Context context) {
+    public SharedPreferencesStore(@NonNull Context context) {
         prefs = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
     }
 
-    public SharePreferencesStore(@NonNull Context context, String name) {
+    public SharedPreferencesStore(@NonNull Context context, String name) {
         if (name == null) {
             prefs = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
         } else {
@@ -27,7 +27,7 @@ public class SharePreferencesStore implements PrimitiveStore {
         }
     }
 
-    public SharePreferencesStore(@NonNull SharedPreferences prefs) {
+    public SharedPreferencesStore(@NonNull SharedPreferences prefs) {
         this.prefs = prefs;
     }
 

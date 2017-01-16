@@ -16,7 +16,7 @@ public class GeneregPrefs {
     }
 
     public Genereg newGenereg() {
-        SharePreferencesStore store = new SharePreferencesStore(context);
+        SharedPreferencesStore store = new SharedPreferencesStore(context);
 
         return new Genereg.Builder()
                 .primitiveStore(store)
