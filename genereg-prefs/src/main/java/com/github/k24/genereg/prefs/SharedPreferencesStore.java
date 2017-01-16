@@ -1,5 +1,6 @@
 package com.github.k24.genereg.prefs;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -57,6 +58,7 @@ public class SharedPreferencesStore implements PrimitiveStore {
     private class CompatEditor implements Editor {
         private SharedPreferences.Editor edit;
 
+        @SuppressLint("CommitPrefEdits")
         @Override
         public Editor begin() {
             edit = prefs.edit();
